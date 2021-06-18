@@ -1,0 +1,25 @@
+
+☐ Autenticação do usuário: um usuário e uma senha para realizar autent.
+☐ Cadastro de livros: anota-se para cada livro 
+    ☐ o ISBN
+    ✔ nome do livro @done(21-06-17 19:24)
+    ✔ autor @done(21-06-17 19:25)
+    ☐ editora  Editora pode ser relacionada como String.
+    ☐ ano de publicação.
+☐ Cadastro de autores: 
+    ☐ nome do autor
+    ☐ país de origem
+☐ Cadastro de clientes: cliente contém como informação a 
+    ☐ matrícula
+    ☐ nome
+    ☐ telefone.
+☐ Retirada de livros:
+    ☐ registra a retirada de livros de um cliente. 
+      ☐ max 3
+      ☐ deve estar disponivel
+      ☐ calcular data de entrega 
+☐ Devolução de livros:
+    ☐ registra a devolução de livros de um cliente.
+    ☐ o livro torna-se disponível novamente na biblioteca
+    ☐ Verifica se o livro está com atraso e calcula o número de dias de atraso.
+☐ Buscas: buscar por livros disponíveis, livros de um autor, livros por um determinado nome, etc.
