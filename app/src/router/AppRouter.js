@@ -7,6 +7,7 @@ import AddAuthor from '../components/AddAuthor';
 import BooksList from '../components/BooksList';
 
 const AppRouter = () => {
+  // const [books, setBooks] = 
   return (
     <BrowserRouter>
       <div>
@@ -17,6 +18,14 @@ const AppRouter = () => {
             <Route component={AddBook} path="/addbook" />
             <Route component={AddClient} path="/addclient" />
             <Route component={AddAuthor} path="/addauthor" />
+            {/* <Route
+              render={(props) => (
+                <EditBook {...props} books={books} setBooks={setBooks} />
+              )}
+              path="/edit/:id"
+            /> */}
+            {/* redireciona o usuario para pagina principal */}
+            {/* <Route component={() => <Redirect to="/" />} /> */}
           </Switch>
         </div>
       </div>
