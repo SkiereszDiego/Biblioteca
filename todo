@@ -1,4 +1,30 @@
+===Frontend====
+☐ Autenticação do usuário: um usuário e uma senha para realizar autent.
+☐ Cadastro de livros: anota-se para cada livro 
+    ✔ o ISBN @done(21-06-18 16:39)
+    ✔ nome do livro @done(21-06-17 19:24)
+    ✔ autor @done(21-06-17 19:25)
+    ✔ editora  Editora pode ser relacionada como String. @done(21-06-18 16:39)
+    ✔ ano de publicação. @done(21-06-20 19:55)
+☐ Cadastro de autores: 
+    ✔ nome do autor @done(21-06-21 11:49)
+    ✔ país de origem @done(21-06-21 11:49)
+☐ Cadastro de clientes: cliente contém como informação a 
+    ✔ matrícula @done(21-06-21 11:49)
+    ✔ nome @done(21-06-21 11:49)
+    ✔ telefone. @done(21-06-21 11:49)
+☐ Retirada de livros:
+    ☐ registra a retirada de livros de um cliente. 
+      ☐ max 3
+      ☐ deve estar disponivel
+      ☐ calcular data de entrega 
+☐ Devolução de livros:
+    ☐ registra a devolução de livros de um cliente.
+    ☐ o livro torna-se disponível novamente na biblioteca
+    ☐ Verifica se o livro está com atraso e calcula o número de dias de atraso.
+☐ Buscas: buscar por livros disponíveis, livros de um autor, livros por um determinado nome, etc.
 
+===webservice====
 ☐ Autenticação do usuário: um usuário e uma senha para realizar autent.
 ☐ Cadastro de livros: anota-se para cada livro 
     ☐ o ISBN
@@ -22,4 +48,3 @@
     ☐ registra a devolução de livros de um cliente.
     ☐ o livro torna-se disponível novamente na biblioteca
     ☐ Verifica se o livro está com atraso e calcula o número de dias de atraso.
-☐ Buscas: buscar por livros disponíveis, livros de um autor, livros por um determinado nome, etc.

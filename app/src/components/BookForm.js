@@ -5,19 +5,20 @@ import { v4 as uuidv4 } from 'uuid';
 // Defini os estados como objetos unsando useState hook para guardar os dados. se a prop nao for passada ela retorna uma string vazia
 const BookForm = (props) => {
   const [book, setBook] = useState({
+    isbn: props.book ? props.book.isbn : '',
     bookname: props.book ? props.book.bookname : '',
     author: props.book ? props.book.author : '',
     quantity: props.book ? props.book.quantity : '',
-    price: props.book ? props.book.price : '',
+    publisher: props.book ? props.book.publisher : '',
     date: props.book ? props.book.date : ''
   });
 // estado para mostrar mensagens de erro.
   const [errorMsg, setErrorMsg] = useState('');
-  const { bookname, author, price, quantity } = book;
+  const { isbn, bookname, author, quantity, publisher} = book;
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    const values = [bookname, author, price, quantity];
+    const values = [bookname, author, quantity, publisher];
     let errorMsg = '';
 
     //verifica se todos os campos foram preenchidos. Se sim ele cria um objeto com todos valores
@@ -29,10 +30,11 @@ const BookForm = (props) => {
     if (allFieldsFilled) {
       const book = {
         id: uuidv4(),
+        isbn,
         bookname,
         author,
-        price,
         quantity,
+        publisher,
         date: new Date()
       };
       props.handleOnSubmit(book);
@@ -76,6 +78,17 @@ const BookForm = (props) => {
     <div className="main-form">
       {errorMsg && <p className="errorMsg">{errorMsg}</p>}
       <Form onSubmit={handleOnSubmit}>
+        <Form.Group controlId="isbn">
+            <Form.Label>ISBN do livro</Form.Label>
+            <Form.Control
+              className="input-control"
+              type="text"
+              name="isbn"
+              value={isbn}
+              placeholder="ISBN 000-00-00000-00-0"
+              onChange={handleInputChange}
+            />
+        </Form.Group>
         <Form.Group controlId="name">
           <Form.Label>Nome do livro</Form.Label>
           <Form.Control
@@ -109,14 +122,24 @@ const BookForm = (props) => {
             onChange={handleInputChange}
           />
         </Form.Group>
-        <Form.Group controlId="price">
-          <Form.Label>Preço</Form.Label>
+        <Form.Group controlId="publisher">
+          <Form.Label>Editora</Form.Label>
           <Form.Control
             className="input-control"
             type="text"
-            name="price"
-            value={price}
-            placeholder="Digite o valor do livro"
+            name="publisher"
+            value={publisher}
+            placeholder="Digite a editora do livro"
+            onChange={handleInputChange}
+          />
+        </Form.Group>
+        <Form.Group controlId="publisher">
+          <Form.Label>Ano Publicação</Form.Label>
+          <Form.Control
+            className="input-control"
+            type="date"
+            name="publisher"
+            value={publisher}
             onChange={handleInputChange}
           />
         </Form.Group>
